@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+} 
+
+:root{
+  --background-color: #373c56;
+  --background-first-color:  #ff0045;
+  --background-second-color:  #ca3997;
+  --humberger-background-color: #b81568;
+  --color-primary: rgba(108, 77, 245, 0.26);
+  --color-secondary: rgb(24, 133, 184);
+  --color-white: white;
+  --color-tertiary: rgb(9, 177, 79);
+  --color-dark: #131417;
+  --color-danger: rgba(243, 53, 53, 0.945);
+  --color-warning: rgb(255, 251, 0);
+  --color-info: rgb(206, 23, 252);
+
+  --color-text: white;
+}
+
+body{
+	background: var(--color-dark);
+}
+
+.d-block{
+	display: block;
+}

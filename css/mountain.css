@@ -1,0 +1,133 @@
+ *{ margin: 0px; padding: 0px; }
+body {
+	font-size: 120%;
+	background:white;
+
+
+}
+.header {
+	width: 75%;
+	margin: 50px auto 0px;
+	color: purple;
+	background: white;
+	text-align: center;
+	/*border: 1px solid #B0C4DE;*/
+	border-bottom: none;
+	font-family: georgia;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 50px;
+	font-size: 14px;
+
+	
+
+	}
+	form {
+		display:flex;
+		flex-wrap: wrap;
+		justify-content:space-between;
+		background: white;
+	}
+form, .content {
+	width: 75%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid white;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+
+}
+
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+.input-group label {
+	
+	text-align:left;
+	margin: 3px;
+	color: #03647c;
+	font-size:  12px;
+}
+.input-group input {
+	height: 30px;
+	width: 75%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid  orange;
+	
+}
+hr {
+	border: 1px solid orange;
+	width: 100%;
+	height:2%;
+	background-color: orange;
+	}
+#user_type {
+	height: 40px;
+	width: 98%;
+	padding: 5px 10px;
+	background: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: blue;
+	background: none;
+	border: 1px solid;
+	border-radius: 5px;
+	border-color:blue;
+}
+.btn:hover{
+	background:#ff3300;
+
+}
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+	font-size: 10px;
+
+}
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
+}
+.profile_info img {
+	display: inline-block; 
+	width: 50px; 
+	height: 50px; 
+	margin: 5px;
+	float: left;
+}
+.profile_info div {
+	display: inline-block; 
+	margin: 5px;
+}
+.profile_info:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.conditions{
+	color: #3498db;
+	font-size: 15px;
+	text-decoration: none;
+	text-underline-position: none;
+}
+footer{
+	position: relative;
+	margin-top: 50%;
+	width: 100%;
+	background-color:#000000;
+}
