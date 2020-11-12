@@ -34,8 +34,9 @@ function register(){
 	$userName       =  e($_POST['userName']);
 	$password  =  e($_POST['password']);
 	$password_2  =  e($_POST['password_2']);
-	// $image = $_FILES['image']['name'];
-    //$image_tmp = $_FILES['image']['tmp_name']; 
+	$image = e($_FILES['image']['name']);
+    $image_tmp = e($_FILES['image']['tmp_name']); 
+     move_uploaded_file($image_tmp,"C:\\wamp\\www\\Geotravel\\public\\images\\$image");
 	// form validation: ensure that the form is correctly filled
 	if (empty($userName) or (empty($email)) or(empty($password)) or ($password!=$password_2)){
 	//echo  " <p><font color=' #ff726f'><font size='3px'>check your details and try again!!.</p >"; 	

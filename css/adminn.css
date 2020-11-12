@@ -1,0 +1,309 @@
+body{  
+  font-size: 120%;
+  padding: 0;
+  margin:0;
+  background-color: white;
+  font-family: sans-serif;
+}
+*{
+	padding: 0px;
+	margin:0px;
+	box-sizing: border-box;
+}
+.input-group input {
+	height: 30px;
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 12px;
+	border-radius:5px;
+	border-style:none;
+	border: 1px solid orange;
+	color: green;
+	padding-left:12%;
+	align-text: center;
+	margin-left: 30%;
+	border-style:solid ;
+	background-color: white;
+	float: left;
+
+
+
+}
+.datetime{
+	float: right;
+	background-color: green;
+	height:100px;
+	width: 75%;
+	margin-top:1px ;
+	margin-right: 1%;
+	padding: 10px;
+	position: relative;
+	
+
+}
+
+.userinfo{
+	height: 50px;
+	padding-bottom:5px;
+	border: 1px solid #0099ff;
+	padding-left: 2%;
+	width: 50%;
+	border-spacing: 10%;
+	margin-top:2%;
+	margin-left:48%;
+	position: fixed;
+	border-radius: 5px;
+	background-color: #3498db; 
+	color: black;
+	
+
+}
+.messages :hover{
+	
+	width: 10px;
+	border-radius:15px 5px 15px 5px; 
+}
+.userprofile{
+	float: right;
+	margin-top: 2%;
+	margin-right:none;
+	background-color:blue;
+	color:black;
+	size:100%;
+	width:15%;
+	height: 30px;
+	text-align: center;
+	padding-top: 5px;
+	border-left: 2px solid red;
+	font-weight: bold;
+	font-family: sans-serif;
+	
+
+
+
+}
+.notification{
+	Background-color:blue;
+	width: 50px;
+	height:30px;
+	float: right;
+	margin-right :1px;
+	margin-top: 2%;
+	margin-left: 1px;
+	text-align: center;
+}
+.messages{
+	Background-color:blue;
+	width: 50px;
+	height:30px;
+	float: right;
+	margin-right:1px; 
+	margin-top:2%;
+	margin-left:1px;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.calculator{
+	Background-color:blue;
+	width: 50px;
+	height:30px;
+	float: right;
+	margin-right:20%; 
+	margin-top:2%;
+	margin-left:1px;
+	text-align: center;
+	position: center;
+	border-radius:5px;
+	color: black;
+	font-family: sans-serif;
+
+}
+.form{
+	background-color: #3498db;
+	height:50px;
+	width: 50%;
+	margin-top:2%;
+	margin-left: 2%;
+	padding-top: 10px;
+	padding-left: none;
+	position: fixed;
+	border-radius:5px;
+	border:1px solid #0099ff;
+	color: black;
+	font-family: sans-serif;
+	font-weight: bold;	
+
+
+}
+.text-left{
+	margin-top:10%;
+	align-conten:center;
+	margin-left:10%;
+
+}
+#photo{
+	width: 50px; 
+	height: 50px; 
+	border-radius: 100px;
+	background: blue;
+	float :right;
+	margin-bottom:15%;
+	position:center;
+	margin-right:none;
+	border: 2px solid white;
+
+
+
+}
+table{
+	border-collapse:collapse;
+	width: 98%;
+	font-family: calibri, myriad;
+	background-color: white;
+	margin-left: 1%;
+	margin-right: none;
+	margin-top: 2%;
+	padding-top: 20px;
+	font-size: 8px;
+
+}
+
+table, th, td {
+	border-bottom:1px solid black;
+
+}
+tr{
+	padding-left: 2px;
+}
+  
+ .users{
+ 	background-color: green;
+ 	height: 50%;
+ 	width: 98%;
+ 	padding-top: 5% ;
+ 	margin-left: none;
+ 	padding-bottom: 1%;
+
+ }
+
+
+
+table, th, td {
+	border-bottom:1px solid black;
+}
+th {
+background-color: orange; 
+	height: 50px; 
+	text-align: center;
+	paddind: 15px;
+	color:green;
+	border-bottom: 1px solid #ddd;
+	font-size: large;
+
+ }
+ .btn {
+ 	background-color:none;
+ }
+ tr:hover {
+ 	background-color: orange;
+ }
+ tr:nth-child(even){
+ 	background-color: #f2f2f2;
+ }
+ tr:nth-child(even):hover{
+ 	background-color: orange;
+ }
+ td {
+ 	height:5px;
+ 	vertical-align: center;
+ 	padding : 15px;
+	border-bottom: 1px solid #ddd;
+ }
+
+ hr {
+	border-top: 1px solid orange;
+	width: 100%;
+	height:10%;
+}
+
+h2 {
+  text-align: center;
+  color:#36597d;
+  font-family: verdana;
+  font-size: 20px;
+  width:100%;
+   height:20%;
+}
+
+.sidenav a {
+	padding: 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+	transition: 0.3s;
+
+}
+.side .closebtn {
+	position: absolute;
+	top: 0;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#main{
+	transition: margin-left:0.5s;
+	padding: 20px;
+}
+@media screen and (max-height:450px) {
+.sidenav a {padding-top: 15px;}
+.sidenav {
+	font-size: 18px;
+}
+}
+footer{
+	position: relative;
+	margin-top: 50%;
+	width: 100%;
+	background-color:white;
+	align-items: center;
+	padding-left:none;
+	color: #0099ff;
+	font-family: "calibri", Gadget, myriad;
+	font-size: 10px;
+	text-decoration-color: none;
+}
+.header{
+	position: fixed;
+	width: 100%;
+	height: 18%;
+	align-items: center;
+	font-size:;
+	color: red;
+	background: #003366;
+	display: inline-block;
+	padding-left:5%; 
+
+}
+button[name=register_btn] {
+		background: #003366;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

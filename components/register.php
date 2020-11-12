@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title> Geotraveller registration</title>
-    <link rel="stylesheet" href="../css/mountains.css">
+    <link rel="stylesheet" href="../css/mountainn.css">
     <!--link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
     <style>
 			.errors{
@@ -114,7 +114,7 @@
 		<input type="text"  type="text"   name="firstName" id="firstName" maxlength="20" value='<?php
 						if(isset($userName)){echo "$userName";}
 					?>' onkeyup="checkFirstName(this.value)"
-			 />
+			 required />
 			  <div class='errors' id='first'></div>
 			<?php
 				if(isset($erremail)){
@@ -130,7 +130,7 @@
 		<input type="text"  type="text"   name="lastname" id="lastname" maxlength="20" value='<?php
 						if(isset($userName)){echo "$userName";}
 					?>' onkeyup="checkLastName(this.value)"
-			 />
+			required />
 			  <div class='errors' id='last'></div>
 			<?php
 				if(isset($erremail)){
@@ -145,7 +145,7 @@
 		<label>Physical Address</label><br>
 		<input type="text" type="text"   name="address" id="address" maxlength="20" value='<?php
 						if(isset($email)){echo "$email";}
-					?>' onkeyup="checkAddress(this.value)">
+					?>' onkeyup="checkAddress(this.value)" required />
 					<div class='errors' id='Hint'></div>
 			<?php
 				if(isset($erremail)){
@@ -161,7 +161,7 @@
 		value='<?php
 						if(isset($phoneNumber)){echo "$phoneNumber";}
 					?>' onkeyup="checkPhone(this.value)"
-			 />
+			required />
 			  <div class='errors' id='Phone'></div>
 			<?php
 				if(isset($errphone)){
@@ -208,7 +208,7 @@
 		<label>password</label><br>
 		<input type="password"  type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  name="password" id="password" value='<?php
 						if(isset($password)){echo "$password";}
-					?>' onkeyup="checkPassword(this.value)">
+					?>' onkeyup="checkPassword(this.value)" />
 
 					<div class='errors' id='passHint'></div>
 			<?php
@@ -223,10 +223,7 @@
 		<input type="password" name="password_2">
 	</div>
 	
-	<div class="input-group">
-		<label> Profile Image</label><br>
-		<input type="file" name="image" >
-	</div>
+	
 	<div class="input-group">
 		<label>confirm you're Human </label>
 		<input type="checkbox" name="checkbox" required="">
