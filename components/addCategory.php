@@ -31,29 +31,41 @@ if (isset($_GET['edit'])){
   }
 }
 ?>
-<form>
-<input type ="hidden" name="service_category_id" value="<?php echo $service_category_id ?>">
-<label class="control-label col-md-3"> Category </label><br>
-<input type ="text" name="service_category" value="<?php echo $service_category ?>">
-<label class="control-label col-md-3"> Description</label><br>
-<input type ="textarea" name="Description" value="<?php echo $Description ?>">
-<label class="control-label col-md-3">Title</label><br>
-<input type ="text" name="Title" value="<?php echo $Title ?>">
-</form>
 
 <!DOCTYPE html>
 <html>
 <head>
+
+ <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+ <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
    <link rel="stylesheet" href="../css/mountainn.css">
    <link rel="stylesheet" href="../css/styles1.css">
  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
   <title></title>
 </head>
-<body style="background-color: white;">
+
+<body style="backgroundd-color: white;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-6 mt-md-2">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add category
+</button>
+</div>
+</div>
+</div>
+
 
 
  <?php if(isset($_session['message'])): ?>
- <div class ='msg'>
+ <div class ='msg' style="margin-left: 23%; width: 45%;">
   <?php
   echo $_session['message'];
   unset($_session['message']);
@@ -64,6 +76,7 @@ if (isset($_GET['edit'])){
 <?php 
 $count = 1;
 $result=mysqli_query($db,"SELECT *FROM category"); ?>
+<div class="container">
 <table style="margin-left: 20%;font-size: 9px;font-family: sans-serif;color: green;">
   <thead style="background-color: #f5f5f5;">
     <tr>
@@ -83,14 +96,28 @@ $result=mysqli_query($db,"SELECT *FROM category"); ?>
              <td><?php echo $row['Description']; ?></td>
               <td><?php echo $row['Title']; ?></td>
                <td><?php echo $row['service_category_id']; ?></td>
-               <td><a href="index.php?edit=<?php echo $row['service_category_id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
-               <td><a href="server.php?del=<?php echo $row['service_category_id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               <td><a href="EditCategory.php?edit=<?php echo $row['service_category_id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               <td><a href="deleteCategory.php?service_category_id=<?php echo $row['service_category_id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
              </tr>
            <?php }?>
-        }
+        
 </table>
-<div class="col-md-5 col-md-offset-2">
-    <form name="addservice" class="form-horizontal" enctype="multipart/form-data" method="post" action="addCategory.php" style="margin-left: 50%;border: 1px solid #bbbbbb;margin-top: 3%;">
+
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Category</h5 style="color: green;" >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+         <form name="addservice" class="form-horizontal" enctype="multipart/form-data" method="post" action="addCategory.php" style="margin-left: none;border: 1px solid #bbbbbb;margin-top: 3%; width: 80%;">
         <div class="form-group">
             <label class="control-label col-md-3"> Category Name</label><br>
             <div class="col-md-9">
@@ -117,7 +144,24 @@ $result=mysqli_query($db,"SELECT *FROM category"); ?>
             </div>
         </div>
     </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<!-- scripts -->
+   <script type="text/javascript" src="../add/js/jquery.min.js"></script>
+   <script type="text/javascript" src="../add/js/popper.min.js"></script>
+    <script type="text/javascript" src="../add/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../add/js/mdb.min.js"></script>
+    <script type="text/javascript" src="../add/js/app.js"></script>
+
+
 </body>
 </html>
 <?php

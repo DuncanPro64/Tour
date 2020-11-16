@@ -6,7 +6,7 @@ session_start();
   $email="";
   $comment="";
   $subject="";
-  $momment_id=0;
+  $comment_id=0;
   
   $update= false;
   if(isset($_POST['save'])){
@@ -20,26 +20,7 @@ session_start();
     //header('location:home.php');
   }
 ?>
-<!--?php 
-if (isset($_GET['edit'])){
-  $id= $_GET['edit'];
-  $upade=true;
-  $record= mysqli_query($db,"SELECT * FROM comments WHERE comment_id = $id");
-  if(count($record)==1){
-    $n= mysqli_fetch_array($record);
-    $email=$n['email'];
-    $subject=$n['subject'];
-    $comment=$n['comment'];
-    $comment_id=$n['comment_id'];
-  }
-}
-?>
-<form>
-<input type ="hidden" name="comment_id" value="<?php echo $comment_id ?>">
-<input type ="text" name="email" value="<?php echo $email ?>">
-<input type ="text" name="subject" value="<?php echo $subject ?>">
 
-</form>-->
 
 <!DOCTYPE html>
 <html>
@@ -82,8 +63,8 @@ $result=mysqli_query($db,"SELECT *FROM comments"); ?>
              <td><?php echo $row['subject']; ?></td>
               <td><?php echo $row['comment']; ?></td>
                <td><?php echo $row['comment_id']; ?></td>
-               <td><a href="index.php?edit=<?php echo $row['comment_id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
-               <td><a href="server.php?del=<?php echo $row['comment_id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               
+               <td><a href="deleteComment.php?comment_id=<?php echo $row['comment_id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
              </tr>
            <?php }?>
         }

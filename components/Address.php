@@ -84,8 +84,8 @@ $result=mysqli_query($db,"SELECT *FROM address"); ?>
              <td><?php echo $row['Longitude']; ?></td>
               <td><?php echo $row['Latitude']; ?></td>
                
-               <td><a href="index.php?edit=<?php echo $row['address_id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
-               <td><a href="server.php?del=<?php echo $row['address_id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               <td><a href="EditAddress.php?address_id=<?php echo $row['address_id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               <td><a href="deleteAddress.php?address_id=<?php echo $row['address_id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
                <td><a href="server.php?del=<?php echo $row['address_id'];?>" class= "edit-btn"> <img src="../public/images/address_icon.png" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
              </tr>
            <?php }?>

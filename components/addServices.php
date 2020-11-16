@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
   $db = mysqli_connect('localhost', 'root', '', 'Geotraveller');
   
   //initilalize variables
@@ -59,33 +60,16 @@ session_start();
 
 ?> 
 
-<!--?php 
-if (isset($_GET['edit'])){
-  $id= $_GET['edit'];
-  $upade=true;
-  $record= mysqli_query($db,"SELECT * FROM comments WHERE comment_id = $id");
-  if(count($record)==1){
-    $n= mysqli_fetch_array($record);
-    $email=$n['email'];
-    $subject=$n['subject'];
-    $comment=$n['comment'];
-    $comment_id=$n['comment_id'];
-  }
-}
-?>
-<form>
-<input type ="hidden" name="comment_id" value="<?php echo $comment_id ?>">
-<input type ="text" name="email" value="<?php echo $email ?>">
-<input type ="text" name="subject" value="<?php echo $subject ?>">
 
-</form>-->
 
 <!DOCTYPE html>
 <html>
 <head>
-   <link rel="stylesheet" href="../css/mountainn.css">
+
+   <link rel="stylesheet" href="../css/forms1.css">
    <link rel="stylesheet" href="../css/styles1.css">
  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="../bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
   <title></title>
 </head>
 <body style="background-color: white;">
@@ -143,8 +127,8 @@ $result=mysqli_query($db,"SELECT *FROM services"); ?>
                    <td><?php echo $row['address_id']; ?></td>
                      <td><div class="el-card-item"style="box-shadow: 0px 1px 5px #bbbbbb;">
                     <div class="el-card-avatar el-overlay-1"><a href="../components/editProfile.php?service_Id=<?php echo $row['service_Id'];?>" class= "edit-btn"> <img  style="width:30px; height: 20px;" src="http://localhost/ProjectTour/public/images/<?php echo $row['image'];?>" /></a></div></div></td>
-               <td><a href="index.php?edit=<?php echo $row['service_Id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
-               <td><a href="server.php?del=<?php echo $row['service_Id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               <td><a href="EditServices.php?edit=<?php echo $row['service_Id'];?>" class= "edit-btn"> <img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
+               <td><a href="deleteService.php?service_Id=<?php echo $row['service_Id'];?>" class= "edit-btn"> <img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a></td>
              </tr>
            <?php }?>
       
@@ -153,8 +137,8 @@ $result=mysqli_query($db,"SELECT *FROM services"); ?>
     $category_query = "SELECT * FROM category";
     $categories = $crud->getData($category_query);                                      
 ?>--> 
-<div class="col-md-5 col-md-offset-2">
-    <form name="addcomment" class="form-horizontal" enctype="multipart/form-data" method="post" action="addServices.php" style="margin-left: 50%;border: 1px solid grey;margin-top: 3%;">
+<div class="col-md-5 col-md-offset-2" style="display: flex;flex-wrap:wrap;justify-content: space-between; ">
+    <form name="addcomment" class="form-horizontal" enctype="multipart/form-data" method="post" action="addServices.php" style="margin-left: 50%;border: 1px solid grey;margin-top: 3%; display: inline-flex;">
         <div class="form-group">
             <label class="control-label col-md-3"> Service_tag</label><br>
             <div class="col-md-9">
@@ -164,7 +148,7 @@ $result=mysqli_query($db,"SELECT *FROM services"); ?>
              <div class="form-group">
             <label class="control-label col-md-3"></label><br>
             <div class="col-md-9">
-        <textarea rows=5 cols=10 type="textarea" name="service_description" class="form-control" required >Describe your service</textarea>     
+        <textarea rows=5 cols=10 type="textarea" name="service_description" class="form-control" required >Describe your service</textarea> <br>    
             </div>
         </div>
            <div class="form-group">
@@ -232,8 +216,11 @@ $result=mysqli_query($db,"SELECT *FROM services"); ?>
         </div>
     </form>
 </div>
+
+
 </body>
 </html>
 <?php
+include 'test.html';
 include 'footer.php';
 ?>

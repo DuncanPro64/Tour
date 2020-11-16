@@ -1,5 +1,6 @@
 <?php 
 	include"../functions/functions.php";
+  
 	require "../classes/Crud.php";
 	if (!isAdmin()) {
 		$_SESSION['msg'] = "You must log in first";
@@ -98,6 +99,7 @@ $users = $crud->getData($query);
       </div>
 
  </div>
+
     <div class="users">
        <table class="table table-bordered">
                 <thead >
