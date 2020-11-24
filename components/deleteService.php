@@ -47,7 +47,7 @@ else{
      
     
                 <div class='text-center' >
-                    You have requested to delete <br>comment: <b>$service_tag</b>,<br> service_Id.  :<tt class='font-italic font-weight-bold'>$comment_id</tt>.<br> Are you sure?
+                    You have requested to delete <br>comment: <b>$service_tag</b>,<br> service_Id.  :<tt class='font-italic font-weight-bold'>$service_Id</tt>.<br> Are you sure?
                     <div class='text-center mt-2'>
                     
                         <a href='../components/comment.php' class='btn btn-success'>Cancel</a>

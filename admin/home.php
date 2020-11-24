@@ -131,8 +131,8 @@ $users = $crud->getData($query);
                     <td><?php echo $user['address'] ?></td>
                       
                     <td class='text-center'>
-                    <a href='../components/editUser.php?email=<?php echo $user['email'] ?>' class='btn btn-primary'><img src="../public/images/icon_content_small.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a>
-                    <a href='../Components/deleteUser.php?email=<?php echo $user['email'] ?>' class='btn btn-danger'><img src="../public/images/action_delete.gif" alt="image" class="photo" style="width: 20px; height: 20px;border-radius: 300px; margin-top: 1px;"></a>
+                    <a href='../components/editUser.php?email=<?php echo $user['email'] ?>' class='btn btn-primary'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></a>
+                    <a href='../Components/deleteUser.php?email=<?php echo $user['email'] ?>' class='btn btn-danger'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a>
                 </td>
                 </tr>
                 

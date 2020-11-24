@@ -107,7 +107,7 @@ $result=mysqli_query($db,"SELECT *FROM category"); ?>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" >
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add Category</h5 style="color: green;" >
@@ -115,11 +115,11 @@ $result=mysqli_query($db,"SELECT *FROM category"); ?>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
 
-         <form name="addservice" class="form-horizontal" enctype="multipart/form-data" method="post" action="addCategory.php" style="margin-left: none;border: 1px solid #bbbbbb;margin-top: 3%; width: 80%;">
+      <div class="modal-body"style="width: 100%; height: 50%; background: orange;">
+         <form name="addservice" class="form-horizontal" enctype="multipart/form-data" method="post" action="addCategory.php" style="margin-left: none;border: 1px solid green;margin-top: 3%; width: 80%;">
         <div class="form-group">
-            <label class="control-label col-md-3"> Category Name</label><br>
+            <label class="control-label col-md-6"> Category Name</label style="color: green;"><br>
             <div class="col-md-9">
                 <input type="text" name="service_category" class="form-control" required>
             </div>
@@ -140,14 +140,16 @@ $result=mysqli_query($db,"SELECT *FROM category"); ?>
         <div class="form-group" style="margin-left: 10%;margin-top: 2%;">
             <label class="control-label col-md-3">&nbsp;</label><br>
             <div class="col-md-9">
-                <input type="submit" name="save" value="Add Category"  class="btn btn-primary"style="margin-top: 2%;"> 
+                <input type="submit" name="save" value="Add Category"  class="btn btn-primary"style="margin-top: 2%;">
+                
             </div>
         </div>
     </form>
       </div>
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button style="margin-top: 2%; margin-left:70%;"> 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        
+      
       </div>
     </div>
   </div>
